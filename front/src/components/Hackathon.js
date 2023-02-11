@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
-
-import logo from './HackStormlogo.png';
-import connectwalletbutton from './ConnectWalletButton.png';
-import './App.css';
-import Applogo from './conponents/Applogo';
+import React from 'react';
+import logo from '../HackStormlogo.png';
+// import connectwalletbutton from './ConnectWalletButton.png';
+import '../App.css';
+import Applogo from './Applogo';
 import Connectwalletbutton from './Connectwalletbutton';
-import Currentcontent from './conponents/Currentcontent';
-import Hackathonitem from './conponents/Hackathonitem';
+import Currentcontent from './Currentcontent';
+import Hackathonitem from './Hackathonitem';
 
 const Hackthon = () => {
   return (
     <>
-        <Applogo 
+        {/* <Applogo 
           img={logo}
-        />
+        /> */}
         <Connectwalletbutton
-          img={connectwalletbutton}
+          // img={connectwalletbutton}
         />
 
         <body className="Body">

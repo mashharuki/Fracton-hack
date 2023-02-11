@@ -1,3 +1,4 @@
+import React from 'react';
 const Hackathon = (props) =>{
     return (
         <div>

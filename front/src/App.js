@@ -1,22 +1,28 @@
-
+import React from 'react';
 import logo from './HackStormlogo.png';
 import connectwalletbutton from './ConnectWalletButton.png';
-import Applogo from './conponents/Applogo';
-import Connectwalletbutton from './Connectwalletbutton';
-
+import Applogo from './components/Applogo';
+import Connectwalletbutton from './components/Connectwalletbutton';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Hackathon from "./components/Hackathon";
 import Event from "./components/Event";
+
+function Navbar({ logo, connectwalletbutton }) {
+  return (
+    <>
+      <Applogo img={logo} />
+      <Connectwalletbutton img={connectwalletbutton} />
+    </>
+  );
+}
 
 function App() {
   return (
     <>
         <BrowserRouter>
-          <Applogo 
-              img={logo}
-            />
-          <Connectwalletbutton
-            img={connectwalletbutton}
+        <Navbar 
+            logo={logo}
+            connectwalletbutton={connectwalletbutton}
           />
           <Routes>
             <Route path={`/`} element={<Hackathon />} />
