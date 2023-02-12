@@ -2,18 +2,19 @@ import React from 'react';
 import Timeicon from './Timeicon.png'
 import Participantsicon from './Participantsicon.png'
 
-const Hackathonitem = (props) =>{
+const Eventdetail = (props) =>{
     return (
         <div>
-            <img src={"./${props.img}"}/>  
-            <p>{props.name}</p>
+            <p>{props.title}</p>
+            <p>{props.requirements}</p>
             <img src={Timeicon}></img>
             <img src={Participantsicon}></img>
             <p>{props.date}</p>
-            <p>{props.about}</p>
-            <p>{props.islive}</p>
+            <p>{props.participants}人</p>
+            <p>{props.joinorreserve}</p>
+            <p>{props.detail}</p>
         </div>
     )
 }
 
-export default Hackathonitem;
+export default Eventdetail;
