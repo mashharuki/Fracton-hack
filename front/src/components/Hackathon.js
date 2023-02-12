@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-
 import '../App.css';
 import Currentcontent from './Currentcontent';
 import Hackathonitem from './Hackathonitem';

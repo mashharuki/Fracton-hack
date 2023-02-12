@@ -7,7 +7,7 @@ const Eventitem = (props) =>{
         <div>
             <p>{props.title}</p>
             <img src={props.img}/>  
-            <p>{props.organaizer}</p>
+            <p>{props.organize}</p>
             <p>募 : {props.requirements}</p>
             <img src={Timeicon}></img>
             <p>{props.starttime}~</p>

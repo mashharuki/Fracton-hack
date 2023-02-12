@@ -61,3 +61,46 @@ const Event = () => {
 };
 
 export default Event;
+
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import Eventitem from './Eventitem';
+// import "../App.css";
+// import { db } from "./firebase";
+// import { collection } from "firebase/firestore";
+
+// const Event = () => {
+//   const [events, setEvents] = useState([]);
+//   useEffect(() => {
+//     const eventData = db.collection("events").onSnapshot((snapshot) => {
+//       const updatedEvents = snapshot.docs.map((doc) => ({
+//         id: doc.id,
+//         ...doc.data(),
+//       }));
+//       setEvents(updatedEvents);
+//     });
+//     return () => eventData();
+//   }, []);
+
+//   return (
+//       <div>
+//         {events.map((event) => (
+//         <Link to={'/event/zk'} key={event.id}>
+//           <Eventitem
+//           title={event.title}
+//           img= {event.img}
+//           organize={event.organize}
+//           requirements={event.requirements}
+//           starttime={event.starttime}
+//           finishtime={event.finishtime}
+//           participants={event.participants}
+//           about={event.about}
+//           joinorreserve="今すぐ参加"
+//           />
+//         </Link>
+//         ))}
+//       </div>
+//   );
+// };
+
+// export default Event;

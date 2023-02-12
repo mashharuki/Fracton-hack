@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import React from "react";
 import Web3 from "web3";
+import { collection, addDoc } from "firebase/firestore";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "./firebase.js";
+import { auth, db } from "./firebase";
 import "../App.css";
+import { useLocalStorage } from 'react-use';
 
 function Signup() {
   const navigate = useNavigate();
@@ -15,6 +17,8 @@ function Signup() {
   const [isSubmit, setIsSubmit] = useState(false);
   const [web3, setWeb3] = useState(null);
   const [account, setAccount] = useState(null);
+  const [localStorageData, setLocalStorageData] = useLocalStorage('local-storage-key', {});
+
   const connectMetamask = async () => {
     if (typeof window.ethereum !== "undefined") {
       setWeb3(new Web3(window.ethereum));
@@ -47,6 +51,15 @@ function Signup() {
     }
     try {
       await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
+      await addDoc(collection(db, "posts"), {
+        email: registerEmail,
+        password: registerPassword,
+        wallet: account,
+        created_at: new Date().getTime()
+      });
+      await setLocalStorageData({
+        wallet: account,
+      });
       navigate('/');
     } catch (error) {
       alert("正しく入力してください。");

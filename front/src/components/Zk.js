@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Date from './Date';
 import Eventdetail from './Eventdetail';
 import Organaizer from './Organaizer';
+import "../App.css";
 
 const Zk = () => {
   return (
