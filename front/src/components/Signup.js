@@ -17,7 +17,7 @@ function Signup() {
   const [isSubmit, setIsSubmit] = useState(false);
   const [web3, setWeb3] = useState(null);
   const [account, setAccount] = useState(null);
-  const [localStorageData, setLocalStorageData] = useLocalStorage('local-storage-key', {});
+  const [setLocalStorageData] = useLocalStorage('local-storage-key', {});
 
   const connectMetamask = async () => {
     if (typeof window.ethereum !== "undefined") {
