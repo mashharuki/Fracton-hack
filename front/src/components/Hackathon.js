@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import '../App.css';
 import Currentcontent from './Currentcontent';
 import Hackathonitem from './Hackathonitem';
+import Fractonicon from './Fractonicon.png';
 
 const Hackthon = () => {
   return (
@@ -16,6 +17,7 @@ const Hackthon = () => {
             </div>
             <Link to='/event'>
             <Hackathonitem
+            img={Fractonicon}
             name="Fracton Hackathon"
             date="1/29~2/14"
             about="The Graphやarweaveなどの分散型インフラの利用にフォーカスすることにより、dapps開発のエンジニアのオンボーディングを加速させます"

@@ -24,7 +24,6 @@ const Event = () => {
         finishtime="20:00"
         participants="7"
         about="事前に分割したロールごとにtransfer可能な金額を分配できる、ERC4337に準拠したコントラクトウォレット。"
-        detail="詳細"
         joinorreserve="今すぐ参加"
         />
       </Link>
@@ -38,7 +37,6 @@ const Event = () => {
         finishtime="20:00"
         participants="3"
         about="DAOの共同資産を安全に運用するためのマルチシグ。ゼロ知識証明で、資産を管理しているEOAアドレスを秘匿化"
-        detail="詳細"
         joinorreserve="今すぐ参加"
         />
       </Link>
